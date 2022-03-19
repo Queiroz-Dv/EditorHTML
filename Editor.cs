@@ -33,8 +33,6 @@ namespace EditorHtml
 
       Console.WriteLine("----------------");
       Console.WriteLine(" Deseja salvar o arquivo? (S|N)");
-      // Implementar depois...
-
       Viewer.Show(file.ToString());
     }
   }
