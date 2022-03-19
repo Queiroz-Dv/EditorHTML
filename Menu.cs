@@ -6,39 +6,71 @@ namespace EditorHtml
     {
       Console.Clear();
       // Background é a cor do fundo 
-      Console.BackgroundColor = ConsoleColor.DarkGray;
+      Console.BackgroundColor = ConsoleColor.DarkMagenta;
       // Foreground é a cor da letra 
       Console.ForegroundColor = ConsoleColor.White;
 
       DrawScreen();
+      WriterOptions();
+
+      var option = short.Parse(Console.ReadLine());
     }
+
+    public static void WriterOptions()
+    {
+      Console.SetCursorPosition(3, 2);
+      Console.WriteLine("Editor HTML");
+      Console.SetCursorPosition(3, 3);
+      Console.WriteLine("============");
+      Console.SetCursorPosition(3, 4);
+      Console.WriteLine("Selecione uma opção");
+      Console.SetCursorPosition(3, 6);
+      Console.WriteLine("1 - Novo Arquivo");
+      Console.SetCursorPosition(3, 7);
+      Console.WriteLine("2 - Abrir");
+      Console.SetCursorPosition(3, 9);
+      Console.WriteLine("0 - Sair");
+      Console.SetCursorPosition(3, 10);
+      Console.Write("Opção: ");
+    }
+    
 
     public static void DrawScreen()
     {
       //Top Base
-      Console.WriteLine("+");
-      for (int i = 0; i < 30; i++)
-        Console.WriteLine("-");
-
-      Console.WriteLine("+");
-      Console.WriteLine("\n");
+      Top();
 
       //Colums
-      for (int lines = 0; lines < 10; lines++)
+      for (int lines = 0; lines <= 10; lines++)
       {
-        Console.WriteLine("|");
-        for (int i = 0; i < 30; i++)
-          Console.WriteLine(" ");
-
-        Console.WriteLine("|");
+        Console.Write("|");
+        for (int i = 0; i <= 30; i++)
+        {
+          Console.Write(" ");
+        }
+        Console.Write("|");
+        Console.Write("\n");
       }
-      // Top Bottom
-      Console.WriteLine("+");
-      for (int i = 0; i < 30; i++)
-        Console.WriteLine("-");
 
-      Console.WriteLine("+");
-      Console.WriteLine("\n");
+      // Top Bottom
+      Top();
     }
+
+    private static void Top()
+    {
+      Console.Write("+");
+      for (int i = 0; i <= 30; i++)
+      {
+        Console.Write("-");
+      }
+
+      Console.Write("+");
+      Console.Write("\n");
+    }
+  
+  public static void HandleMenuOption(){
+    
   }
+  }
+
 }
