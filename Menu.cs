@@ -6,7 +6,7 @@ namespace EditorHtml
     {
       Console.Clear();
       // Background é a cor do fundo 
-      Console.BackgroundColor = ConsoleColor.DarkMagenta;
+      Console.BackgroundColor = ConsoleColor.DarkBlue;
       // Foreground é a cor da letra 
       Console.ForegroundColor = ConsoleColor.White;
 
@@ -74,7 +74,7 @@ namespace EditorHtml
       switch (option)
       {
         case 1:
-          Console.WriteLine("Editor");
+          Editor.Show();
           break;
         case 2:
           Console.WriteLine("View");
